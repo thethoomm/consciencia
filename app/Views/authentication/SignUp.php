@@ -103,7 +103,7 @@
         <p>Ao usar nossos serviços, você concorda com estes termos e condições. Se tiver dúvidas ou preocupações, entre em contato conosco.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Recusar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="recuseTerms()">Recusar</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="acceptTerms()">Aceitar</button>
       </div>
     </div>
@@ -113,6 +113,10 @@
 <script>
   function acceptTerms() {
     document.getElementById('terms').checked = true;
+  }
+
+  function recuseTerms() {
+    document.getElementById('terms').checked = false;
   }
 
   function validatePasswords() {

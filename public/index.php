@@ -24,7 +24,6 @@ $GLOBALS['topics'] = [
     'Meio Ambiente',
     'Energia',
     'Sustentabilidade',
-    'Futebol'
 ];
 
 function toSlug($string)

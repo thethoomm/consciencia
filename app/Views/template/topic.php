@@ -8,9 +8,11 @@
     </div>
     <?= $carrousel ?>
     <div class="d-flex flex-wrap gap-5 mt-5 justify-content-center">
-      <?php foreach ($cards as $card) : ?>
-        <?= $card ?>
-      <?php endforeach; ?>
+      <?php for($i = 0; $i < 8; $i++): ?>
+        <?= $cards[$i] ?>
+      <?php endfor; ?>
     </div>
   </div>
 </main>
+
+<?= $components['footer']?>

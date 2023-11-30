@@ -18,14 +18,18 @@ class AuthController extends BaseController
 
     public function login()
     {
+
+        $weatherAPI = new WeatherAPIController();
+        $weather = $weatherAPI->getCityWeather();
+
         $title = 'Login';
         $components = [
             'header' => view('components/Header.php', ['title' => $title]),
-            'navbar' => view('components/Navbar.php'),
+            'navbar' => view('components/Navbar.php', ['weather' => $weather]),
             'footer' => view('components/Footer.php'),
         ];
 
-        echo view('authentication/Login.php', [
+        echo view('authentication/Login.php', [ 
             'components' => $components,
         ]);
     }
@@ -49,10 +53,13 @@ class AuthController extends BaseController
 
     public function signUp()
     {
+        $weatherAPI = new WeatherAPIController();
+        $weather = $weatherAPI->getCityWeather();
+
         $title = 'Registrar';
         $components = [
             'header' => view('components/Header.php', ['title' => $title]),
-            'navbar' => view('components/Navbar.php'),
+            'navbar' => view('components/Navbar.php', ['wea ther' => $weather]),
             'footer' => view('components/Footer.php'),
         ];
 
